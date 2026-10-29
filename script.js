@@ -276,34 +276,40 @@ const sessions=[[["09:00–09:30", "Sesión plenaria inaugural", "Nicholas Turne
   return [p.title, p.description, p.credit].filter(Boolean).join(' — ');
 }
 function renderGallery() {
-  gallery.innerHTML = '';
+  gallery.replaceChildren();
   photos.slice(0, count).forEach((p, i) => {
-    const card = document.createElement('button');
+    const card = document.createElement('article');
     card.className = 'photo-card';
-    card.dataset.i = String(i);
-    card.setAttribute('aria-label', `Ampliar fotografía ${i + 1}`);
+
     const img = document.createElement('img');
     img.src = p.src;
-    img.alt = photoCaption(p);
+    img.alt = p.description ? `${p.title} ${p.description}` : p.title;
     img.loading = 'lazy';
-    const label = document.createElement('span');
-    label.textContent = p.title;
-    card.append(img, label);
+
+    const caption = document.createElement('div');
+    caption.className = 'photo-caption';
+    const title = document.createElement('h3');
+    title.className = 'photo-title';
+    title.textContent = p.title;
+    caption.append(title);
+
+    if (p.description) {
+      const description = document.createElement('p');
+      description.className = 'photo-description';
+      description.textContent = p.description;
+      caption.append(description);
+    }
+    if (p.credit) {
+      const credit = document.createElement('p');
+      credit.className = 'photo-credit';
+      credit.textContent = p.credit;
+      caption.append(credit);
+    }
+    card.append(img, caption);
     gallery.append(card);
   });
   document.getElementById('more').hidden = count >= photos.length;
 }
-gallery.addEventListener('click', e => {
-  const b = e.target.closest('[data-i]');
-  if (!b) return;
-  const p = photos[Number(b.dataset.i)];
-  document.getElementById('lightbox-img').src = p.src;
-  document.getElementById('lightbox-img').alt = p.title;
-  document.getElementById('lightbox-caption').textContent = photoCaption(p);
-  dlg.showModal();
-});
-document.getElementById('close-lightbox').onclick = () => dlg.close();
-dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
 document.getElementById('more').onclick = () => { count += 9; renderGallery(); };
 renderGallery();
-const menu=document.querySelector('.menu'),nav=document.querySelector('#nav');menu.onclick=()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open))};nav.querySelectorAll('a').forEach(a=>a.onclick=()=>nav.classList.remove('open'));
+const menu=document.querySelector('.menu'),nav=document.querySelector('#nav');menu.onclick=()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open))};nav.querySelectorAll('a').forEach(a=>a.onclick=()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false')});
