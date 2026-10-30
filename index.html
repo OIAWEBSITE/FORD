@@ -10,14 +10,14 @@
 </head>
 <body>
 <header class="top">
-  <a class="brand" href="#inicio" aria-label="Ir al inicio"><img src="assets/ford-logo.png" alt="Ford Foundation"></a>
+  <div class="brand-group"><a class="brand" href="#inicio" aria-label="Ir al inicio"><img src="assets/ford-logo.png" alt="Fundación Ford"></a><span class="brand-divider" aria-hidden="true"></span><a class="brand brand-uniandes" href="https://www.uniandes.edu.co/" target="_blank" rel="noopener" aria-label="Universidad de los Andes"><img src="assets/uniandes-logo.png" alt="Universidad de los Andes"></a></div>
   <button class="menu" aria-label="Abrir menú" aria-expanded="false">☰</button>
   <nav id="nav"><a href="#sobre">El encuentro</a><a href="#agenda">Agenda</a><a href="#memoria">Memoria histórica</a><a href="#homenaje">Homenaje</a><a href="#lugar">Lugar</a></nav>
 </header>
 <main>
   <section class="hero" id="inicio">
     <div class="hero-copy">
-      <p class="eyebrow">Fundación Ford × Universidad de los Andes</p>
+      <p class="eyebrow">Fundación Ford | Universidad de los Andes</p>
       <p class="small-overline">17 — 18 NOVIEMBRE 2026 · BOGOTÁ, COLOMBIA</p>
       <h1>Filantropía en tiempos <em>de cambio:</em><br> lecciones y horizontes<span class="dot">.</span></h1>
       <p class="lede">Más de 65 años de la Fundación Ford en la Región Andina. Un encuentro para mirar nuestra historia, dialogar sobre el presente e imaginar futuros más justos.</p>
@@ -33,7 +33,7 @@
   <section class="agenda section" id="agenda">
     <div class="section-head"><div><p class="eyebrow">02 / PROGRAMACIÓN</p><h2>Dos días para <em>pensar el futuro.</em></h2></div><a class="download" href="assets/agenda-oficial.pdf" target="_blank" rel="noopener">Ver agenda en PDF ↗</a></div>
     <div class="tabs" role="tablist"><button class="tab active" data-day="0" role="tab" aria-selected="true"><small>MARTES</small>17 NOVIEMBRE</button><button class="tab" data-day="1" role="tab" aria-selected="false"><small>MIÉRCOLES</small>18 NOVIEMBRE</button></div>
-    <p class="agenda-note">La programación y los participantes pueden estar sujetos a cambios.</p><div id="agenda-list" class="agenda-list"></div>
+    <h3 class="agenda-day-title" id="agenda-day-title"></h3><p class="agenda-note">La programación y los participantes pueden estar sujetos a cambios.</p><div id="agenda-list" class="agenda-list"></div>
   </section>
   <section class="gallery-section section" id="memoria">
     <div class="section-head"><div><p class="eyebrow">03 / ARCHIVO FOTOGRÁFICO</p><h2>Imágenes de una <em>historia viva.</em></h2></div><p>Una mirada a décadas de colaboración, comunidades y transformación en la Región Andina.</p></div>
@@ -42,7 +42,7 @@
   <section class="tribute section" id="homenaje"><div><p class="eyebrow">04 / IN MEMORIAM</p><h2>En memoria de<br><em>Gustavo Gallón.</em></h2><p>Un espacio de homenaje a su legado y a la defensa de los derechos humanos en Colombia.</p></div><video controls preload="metadata" playsinline aria-label="Video homenaje a Gustavo Gallón"><source src="assets/gustavo-gallon.mp4" type="video/mp4">Tu navegador no admite reproducción de video.</video></section>
   <section class="location section" id="lugar"><p class="eyebrow">05 / NOS VEMOS EN BOGOTÁ</p><div class="two"><h2>El lugar del <em>encuentro.</em></h2><div><p class="location-date">17 y 18 de noviembre de 2026</p><p><strong>Universidad de los Andes</strong><br>Auditorio Lleras Camargo<br>Bogotá, Colombia</p><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Auditorio+Lleras+Camargo+Universidad+de+los+Andes+Bogota" target="_blank" rel="noopener">Cómo llegar ↗</a></div></div></section>
 </main>
-<footer><img src="assets/ford-logo.png" alt="Ford Foundation"><p>Filantropía en tiempos de cambio: lecciones y horizontes<br>17 y 18 de noviembre de 2026 · Bogotá, Colombia</p><p>Encuentro coorganizado con la Universidad de los Andes.</p></footer>
+<footer><div class="footer-brands"><img src="assets/ford-logo.png" alt="Fundación Ford"><img src="assets/uniandes-logo.png" alt="Universidad de los Andes"></div><p>Filantropía en tiempos de cambio: lecciones y horizontes<br>17 y 18 de noviembre de 2026 · Bogotá, Colombia</p><p>Encuentro coorganizado con la Universidad de los Andes.</p></footer>
 <script src="script.js"></script>
 </body>
 </html>
