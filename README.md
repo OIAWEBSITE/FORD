@@ -1,22 +1,29 @@
-# Sitio del encuentro Fundación Ford — Uniandes
+# Filantropía en tiempos de cambio — Fundación Ford & Uniandes
 
-Sitio estático en español, compatible con GitHub Pages.
+Página web estática en español, lista para GitHub Pages. Incluye agenda, historia Ford–Uniandes, galería, biografías y homenaje a Gustavo Gallón.
 
 ## Publicación
-1. Crear un repositorio en GitHub.
-2. Subir **el contenido de esta carpeta** (index.html, styles.css, script.js y assets), no el ZIP sin descomprimir.
-3. Ir a Settings → Pages → Build and deployment → Deploy from a branch.
-4. Elegir `main` y `/ (root)` y guardar.
-5. Abrir la URL publicada que muestra GitHub Pages.
+Sube **el contenido de esta carpeta**, no su carpeta contenedora, a la raíz de la rama `main`. En Settings → Pages selecciona Deploy from a branch, `main` y `/(root)`. Los archivos JSON se consultan con `fetch()` y requieren servidor HTTP: no pruebes mediante `file://`. Para probar localmente: `python -m http.server 8000`.
 
-## Cambios
-- Agenda: editar la constante `sessions` en `script.js` (el archivo `assets/agenda.json` es una copia de referencia).
-- Fotografías: editar el arreglo `photos` en `script.js` y las imágenes en `assets/photos/`.
-- Texto general: `index.html`.
+## Correcciones implementadas
+- Portada Heather Gerken/Javier Ciurlizza, © Liliana Sánchez.
+- Botones de portada agrandados, logo Ford 65+ y logotipo Uniandes.
+- Sección histórica con registros 1961–1970, placa de 2016 y recorte de prensa.
+- Panelistas con retratos y biografías ampliables, agrupados por día.
+- Galería con leyendas y créditos incluidos en Word; contacto de Jennifer Salazar.
+
+## Validaciones editoriales pendientes
+- La fotografía n.º 21 está como “Ccc” en el Word: se dejó una descripción neutra sin atribuir nombres.
+- El recorte histórico de prensa solicita «Nombre del autor / Fototeca Universidad de los Andes»; al no estar identificado el autor, se muestra temporalmente «Autor por confirmar / Fototeca Universidad de los Andes». **Confirmar antes de publicar oficialmente**.
+- Fotografías adicionales sin crédito en el Word muestran «Crédito por confirmar».
+- Confirmar con el equipo organizador si los participantes y horarios de la agenda vigente son definitivos; se conserva la agenda del repositorio original.
+- Las biografías reproducen el documento aportado; pueden diferir de las personas indicadas en la agenda previa y requieren validación editorial.
+
+## Mantenimiento
+- Agenda: `script.js`.
+- Fotos y leyendas: `assets/photos.json`.
+- Biografías: `assets/bios.json`.
+- Historia: `assets/history.json`.
 - Estilos: `styles.css`.
-- Video: `assets/gustavo-gallon.mp4`.
-- La agenda pública de invitación se priorizó sobre la agenda interna, que presenta diferencias.
-- Los perfiles de ponentes no se incluyeron porque están pendientes.
-- Las leyendas extensas y los créditos fotográficos deben validarse y asociarse a cada imagen antes de la publicación institucional final.
-- Verificar derechos y autorizaciones de las fotografías y el video antes de publicar.
-- Para retirar el sitio tras el evento, desactivar Pages en Settings → Pages.
+
+Una vez terminado el evento, GitHub Pages puede desactivarse desde Settings → Pages sin borrar el repositorio.
