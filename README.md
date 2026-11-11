@@ -27,3 +27,15 @@ Sube **el contenido de esta carpeta**, no su carpeta contenedora, a la raíz de 
 - Estilos: `styles.css`.
 
 Una vez terminado el evento, GitHub Pages puede desactivarse desde Settings → Pages sin borrar el repositorio.
+
+## Ajustes de revisión del 6 de noviembre
+- Encuadre de portada: punto focal desplazado para priorizar a Heather y Javier.
+- Fotografías de panelistas: ajuste general de encuadre y ajuste específico del retrato de Raquel Bernal; sin modificar el material original.
+- Ubicación: enlaces visibles en la portada y justo antes de las pestañas de agenda, que llevan a la sección existente del lugar con el botón «Cómo llegar».
+- Autor del recorte de prensa: **no se ha podido establecer con los documentos disponibles**. Se conserva «Autor por confirmar / Fototeca Universidad de los Andes» para evitar atribuciones incorrectas; requiere respuesta del archivo de Uniandes.
+
+### Actualización 11 de noviembre de 2026
+- Agregado Jorge González Jácome a la agenda y biografías, con fotografía del Word actualizado.
+- Agenda PDF actualizada.
+- Fotografías de panelistas completas y centradas sin recorte forzado.
+- Las demás secciones y archivos quedan conservados.

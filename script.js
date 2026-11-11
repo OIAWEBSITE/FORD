@@ -106,6 +106,10 @@ const agenda = [
         [
           "Patricia Tappatá Valdez",
           "Vinculada a Poder Ciudadano y Memoria Abierta; exconsultora de la Fundación Ford"
+        ],
+        [
+          "Jorge González Jácome",
+          "Decano de la Facultad de Derecho de la Universidad de los Andes"
         ]
       ]
     },
@@ -318,6 +322,6 @@ async function loadContent(path){const response=await fetch(path);if(!response.o
 function addText(parent,tag,cls,txt){const node=document.createElement(tag);if(cls)node.className=cls;node.textContent=txt||'';parent.append(node);return node;}
 loadContent('assets/history.json').then(items=>{const root=document.getElementById('history-grid');for(const item of items){const card=addText(root,'article','history-card','');const img=document.createElement('img');img.src=item.src;img.loading='lazy';img.alt=item.title;card.append(img);const box=addText(card,'div','history-card-copy','');addText(box,'h3','',item.title);addText(box,'p','',item.description);addText(box,'small','history-credit',item.credit);}}).catch(err=>console.warn(err));
 let allBios=[];let currentSpeakerDay=0;
-function renderSpeakers(){const root=document.getElementById('speaker-grid');root.replaceChildren();for(const person of allBios.filter(p=>!currentSpeakerDay||p.day===currentSpeakerDay)){const card=addText(root,'article','speaker-card','');if(person.image){const img=document.createElement('img');img.src=person.image;img.alt='Retrato de '+person.name;img.loading='lazy';card.append(img);}else{addText(card,'div','speaker-placeholder',person.name.split(' ').map(x=>x[0]).slice(0,2).join(''));}const content=addText(card,'div','speaker-content','');addText(content,'h3','',person.name);addText(content,'p','speaker-role',person.role);const details=document.createElement('details');details.className='speaker-details';const summary=document.createElement('summary');summary.textContent='Leer biografía';details.append(summary);addText(details,'p','speaker-bio',person.description);content.append(details);}}
+function renderSpeakers(){const root=document.getElementById('speaker-grid');root.replaceChildren();for(const person of allBios.filter(p=>!currentSpeakerDay||p.day===currentSpeakerDay)){const card=addText(root,'article','speaker-card','');card.dataset.person=person.name;if(person.image){const img=document.createElement('img');img.src=person.image;img.alt='Retrato de '+person.name;img.loading='lazy';card.append(img);}else{addText(card,'div','speaker-placeholder',person.name.split(' ').map(x=>x[0]).slice(0,2).join(''));}const content=addText(card,'div','speaker-content','');addText(content,'h3','',person.name);addText(content,'p','speaker-role',person.role);const details=document.createElement('details');details.className='speaker-details';const summary=document.createElement('summary');summary.textContent='Leer biografía';details.append(summary);addText(details,'p','speaker-bio',person.description);content.append(details);}}
 loadContent('assets/bios.json').then(data=>{allBios=data;renderSpeakers();}).catch(err=>console.warn(err));
 document.querySelectorAll('[data-speaker-day]').forEach(btn=>btn.addEventListener('click',()=>{currentSpeakerDay=Number(btn.dataset.speakerDay);document.querySelectorAll('[data-speaker-day]').forEach(b=>{const active=b===btn;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});renderSpeakers();}));
