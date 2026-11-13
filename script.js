@@ -217,6 +217,12 @@ const agenda = [
           "Vicepresidente adjunto de Programas Internacionales"
         ]
       ]
+    },
+    {
+      "time": "Al finalizar la jornada",
+      "title": "Espacio de conversación y exposición fotográfica",
+      "description": "Al cierre de la jornada, se abrirá un espacio para conversar y disfrutar de la exposición fotográfica sobre la historia de la Fundación Ford.",
+      "kind": "break"
     }
   ],
   [

@@ -36,6 +36,14 @@ Una vez terminado el evento, GitHub Pages puede desactivarse desde Settings → 
 
 ### Actualización 11 de noviembre de 2026
 - Agregado Jorge González Jácome a la agenda y biografías, con fotografía del Word actualizado.
-- Agenda PDF actualizada.
+- Agenda digital conservada; se retiró el enlace y el archivo de la agenda en PDF.
 - Fotografías de panelistas completas y centradas sin recorte forzado.
 - Las demás secciones y archivos quedan conservados.
+
+### Ajustes del 13 de noviembre de 2026
+- Se eliminó el botón «Ver agenda en PDF» y el documento PDF de la distribución; permanece la agenda web interactiva.
+- Corregidas las leyendas intercambiadas en las fotografías de Lima, Perú (2000) y Cusco, Perú (2017).
+- Añadida «Reunión con mujeres lideresas de la región andina» en la fotografía de Bogotá (2026).
+- Agregado espacio de conversación y exposición fotográfica después del cierre del día 1, sin modificar horarios existentes.
+- Cargos de biografías uniformados con mayúscula inicial.
+- Reemplazado el retrato de Raquel Bernal por la fotografía nueva facilitada.
